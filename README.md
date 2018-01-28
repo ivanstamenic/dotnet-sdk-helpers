@@ -29,6 +29,15 @@ dotnet sdk get [version] [platform]
 1. Download `dotnet-sdk` script and set its executable bit with **`chmod +x dotnet-sdk`**.
 2. Create a symbolic link to it in <code>/usr/local/bin</code> using the command **`ln -s \<full_path\>/dotnet-sdk /usr/local/bin/`**.
 
+## Bash on Windows
+
+If you are using `dotnet` from WSL (Windows Subsystem for Linux) you can use the `dotnet-sdk` for Mac with one change to the path.
+
+1. Download the `dotnet-sdk-wsl` to your `/usr/<username>/bin` and name it `dotnet-sdk`
+2. set its executable bit with **`chmod +x dotnet-sdk`**.
+
+> No need for symbolic link.
+
 This will make it possible to invoke the command using the <code>dotnet sdk</code> syntax.
 
 ## Troubleshooting installation of helpers
@@ -38,10 +47,10 @@ This will make it possible to invoke the command using the <code>dotnet sdk</cod
 If the following message appears when running dotnet-.net.cmd from an administrator command prompt
 
     ```
-    WARNING: The data being saved is truncated to 1024 characters. 
-                                                                
-    SUCCESS: Specified value was saved.                            
+    WARNING: The data being saved is truncated to 1024 characters.
+
+    SUCCESS: Specified value was saved.
     ```
-    
+
 1. Edit the Path system variable manually and add the path that contains the cloned repository to it. E.g. if this repo was cloned at `C:\Projects\dotnet-sdk-helpers`, then this should be added to Path
 2. Relaunch any open command shells. Alternatively, if chocolatey is installed, type `refreshenv` and press enter.
